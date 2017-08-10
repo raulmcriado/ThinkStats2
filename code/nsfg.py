@@ -4,6 +4,7 @@ by Allen B. Downey, available from greenteapress.com
 Copyright 2010 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 """
+# C:\Raul_C_LOCAL\zz_personal\javscript\ThinkStats2-master\repo_python\ThinkStats2\code\nsfg.py
 
 from __future__ import print_function, division
 
@@ -163,3 +164,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
