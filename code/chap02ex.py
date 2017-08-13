@@ -27,10 +27,10 @@ def Mode(hist):
     returns: value from Hist
     """
     max_freq = 0
-    for key ,freq in hist.Ttems():
+    for key ,freq in hist.Items():
         if freq> max_freq:
             max_freq = freq
-            max_key = max_key
+            max_key = key
             
         
     return max_key
@@ -43,9 +43,9 @@ def AllModes(hist):
 
     returns: iterator of value-freq pairs
     """
-    return sorted(hist.Items(),key=lambda item: item1[1],reverse=True)
+    return sorted(hist.Items(),key=lambda item: item[1],reverse=True)
     
-def WeightDiff (live,firsts,others):
+def stats_compare (live,firsts,others):
     """
     
     live: DataFrame of all live births
@@ -92,10 +92,16 @@ def main(script):
     firsts = live[live.birthord == 1]
     others = live[live.birthord != 1]
     
-    firsts = live[preg
-    live, firsts, others = first.MakeFrames()
+    
+    assert len(live) == 9148
+    assert len(firsts) == 4413
+    assert len(others) == 4735
+    
+   
+    
+    stats_compare(live,firsts,others)
+       
     hist = thinkstats2.Hist(live.prglngth)
-
     # test Mode    
     mode = Mode(hist)
     print('Mode of preg length', mode)
